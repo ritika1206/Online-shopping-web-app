@@ -1,0 +1,22 @@
+<%- include("../includes/header") %>
+
+</head>
+<body>
+    <%- include("../includes/navigation") %>
+    <main>
+        <% if(prods.length > 0){ %>
+            <% for(let product of prods){ %>
+                <ul>
+                    <li>
+                        <h3><%= product.name %></h3>
+                        <img src="<%= product.imageUrl %>">
+                        <h3><%= product.price %></h3>
+                    </li>
+                </ul>
+            <% } %>
+        <% }else{ %>
+            <h1>No Products found, Shop is empty</h1>
+        <% } %>
+    </main>
+
+<%- include("../includes/footer") %>
